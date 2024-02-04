@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button id="theme">Dark mode</button>
+    <div class="message-error">
+      <h1>Une erreur est survenue lors de l'envoi du formulaire</h1>
+    </div>
+    <div class="message-success">
+      <h1>Votre formulaire a bien été envoyé</h1>
+    </div>
+    <form id="formulaire">
+      <div>
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom" />
+        <div class="message-error" id="nom-error">Veuillez entrer un nom</div>
+      </div>
+      <div>
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" id="prenom" />
+        <div class="message-error" id="prenom-error">
+          Veuillez entrer un prénom
+        </div>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <div class="message-error" id="email-error">
+          Veuillez entrer un email
+        </div>
+      </div>
+      <div>
+        <label for="radios">Seconde</label>
+        <input type="radio" name="radios" id="radio1" value="radio1" />
+        <label for="radio1">Première</label>
+        <input type="radio" name="radios" id="radio2" value="radio2" />
+        <label for="radio2">Terminale</label>
+        <input type="radio" name="radios" id="radio3" value="radio3" />
+      </div>
+      <div>
+        <label for="axe">Mon axe :</label>
+        <select name="axe" id="axe">
+          <option value="">Choisir mon axe</option>
+          <option value="axe01">Création & Design</option>
+          <option value="axe02">Coding</option>
+          <option value="axe03">Animation 3D</option>
+        </select>
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/img01.jpg" alt="img01" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img02.jpg" alt="img02" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img03.png" alt="img03" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/2.2.4/vanilla.filterizr.min.js"></script>
+  <main class="portfolio">
+    <div class="filters">
+      <ul>
+        <li data-filter="all" class="active">Tous les projets</li>
+        <li data-filter="cd">Création & Design</li>
+        <li data-filter="cdeb">Com Digitale</li>
+        <li data-filter="dw">Web Dev</li>
+        <li data-filter="3d">Animation 3D</li>
+        <li data-filter="jv">Jeux Vidéo</li>
+      </ul>
+    </div>
+    <div class="portfolio-elements">
+      <div class="card filtr-item" data-category="cd">
+        <div class="card-header">
+          <p class="card-title">Motion design</p>
+          <div class="card-axe">Creation & Design</div>
+        </div>
+        <a href="images/motion.png">
+          <img src="images/motion.png" alt="Motion" />
+        </a>
+      </div>
+      <div class="card filtr-item" data-category="3d">
+        <div class="card-header">
+          <p class="card-title">Texturing</p>
+          <div class="card-axe">Animation 3D</div>
+        </div>
+        <a href="images/texturing.png">
+          <img src="images/texturing.png" alt="Showreel" />
+        </a>
+      </div>
+      <div class="card filtr-item" data-category="cdeb">
+        <div class="card-header">
+          <p class="card-title">Projet de com</p>
+          <div class="card-axe">affiche</div>
+        </div>
+        <a href="images/com.png">
+          <img src="images/com.png" alt="affiche de com" />
+        </a>
+      </div>
+      <div class="card filtr-item" data-category="jv">
+        <div class="card-header">
+          <p class="card-title">Game Art</p>
+          <div class="card-axe">Jeux vidéo</div>
+        </div>
+        <a href="images/gameart.png">
+          <img src="images/gameart.png" alt="arrière plan jeu" />
+        </a>
+      </div>
+      <div class="card filtr-item" data-category="dw">
+        <div class="card-header">
+          <p class="card-title">Album Réalité Alt</p>
+          <div class="card-axe">Développement Web</div>
+        </div>
+        <a href="images/web.png">
+          <img src="images/web.png" alt="website" />
+        </a>
+      </div>
+    </div>
+    <script src="lightbox.js"></script>
+  </main>
+</html>
